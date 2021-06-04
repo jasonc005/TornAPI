@@ -11,7 +11,7 @@ namespace TornAPI
 
         public static object GetUser(int? userId, List<UserSelections> selections, string apiKey)
         {
-
+            return new NotImplementedException();
         }
     }
 }
