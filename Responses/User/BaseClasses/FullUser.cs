@@ -94,6 +94,9 @@ namespace TornAPI.Responses.User.BaseClasses
         [JsonProperty(PropertyName = "criminalrecord")]
         public CriminalRecord CriminalRecord { get; set; }
 
+        [JsonProperty(PropertyName = "discord")]
+        public Discord Discord { get; set; }
+
 
 
     }
