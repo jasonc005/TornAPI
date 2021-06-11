@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace TornAPI.Responses.User.Selections
 {
-    public class BattleStatsSelection : UserSelectionBase
+    public class BattleStatsSelection : IUserSelection
     {
         [JsonProperty(PropertyName = "strength")]
         public long? Strength { get; set; }
@@ -43,5 +43,10 @@ namespace TornAPI.Responses.User.Selections
 
         [JsonProperty(PropertyName = "dexterity_info")]
         public List<string> DexterityInfo { get; set; }
+
+        public string GetSelectionName()
+        {
+            return SelectionEnums.UserSelections.BattleStats.ToString();
+        }
     }
 }

@@ -1,8 +1,9 @@
 ﻿using Newtonsoft.Json;
+using TornAPI.Responses.User.BaseClasses;
 
 namespace TornAPI.Responses.User.Selections
 {
-    public class BarsSelection : UserSelectionBase
+    public class BarsSelection : IUserSelection
     {
         [JsonProperty(PropertyName = "server_time")]
         public long? ServerTime { get; set; }
@@ -21,5 +22,10 @@ namespace TornAPI.Responses.User.Selections
 
         [JsonProperty(PropertyName = "chain")]
         public Chain Chain { get; set; }
+
+        public string GetSelectionName()
+        {
+            return SelectionEnums.UserSelections.Bars.ToString();
+        }
     }
 }

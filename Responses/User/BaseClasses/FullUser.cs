@@ -91,6 +91,8 @@ namespace TornAPI.Responses.User.BaseClasses
         [JsonProperty(PropertyName = "cooldowns")]
         public Cooldowns Cooldowns { get; set; }
 
+        [JsonProperty(PropertyName = "criminalrecord")]
+        public CriminalRecord CriminalRecord { get; set; }
 
 
 

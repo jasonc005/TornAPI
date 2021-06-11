@@ -1,8 +1,9 @@
 ﻿using Newtonsoft.Json;
+using TornAPI.Responses.User.BaseClasses;
 
 namespace TornAPI.Responses.User.Selections
 {
-    public class BasicSelection : UserSelectionBase
+    public class BasicSelection : IUserSelection
     {
         [JsonProperty(PropertyName = "level")]
         public int? Level { get; set; }
@@ -18,5 +19,10 @@ namespace TornAPI.Responses.User.Selections
 
         [JsonProperty(PropertyName = "status")]
         public Status Status { get; set; }
+
+        public string GetSelectionName()
+        {
+            return SelectionEnums.UserSelections.Basic.ToString();
+        }
     }
 }
