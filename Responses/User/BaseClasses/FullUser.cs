@@ -97,7 +97,8 @@ namespace TornAPI.Responses.User.BaseClasses
         [JsonProperty(PropertyName = "discord")]
         public Discord Discord { get; set; }
 
-
+        [JsonProperty(PropertyName = "display")]
+        public List<DisplayCaseItem> DisplayCase { get; set; }
 
     }
 }
