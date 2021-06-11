@@ -1,0 +1,37 @@
+﻿namespace TornAPI.SelectionEnums
+{
+    public enum FactionSelections
+    {
+        Applications,
+        Armor,
+        ArmoryNews,
+        AttackNews,
+        Attacks,
+        AttacksFull,
+        Basic,
+        Boosters,
+        Cesium,
+        Chain,
+        Chains,
+        Contributors,
+        CrimeNews,
+        Crimes,
+        Currency,
+        Donations,
+        Drugs,
+        FundsNews,
+        MainNews,
+        Medical,
+        MembershipNews,
+        Positions,
+        Reports,
+        Revives,
+        RevivesFull,
+        Stats,
+        Temporary,
+        Territory,
+        Timestamp,
+        Upgrades,
+        Weapons
+    }
+}
