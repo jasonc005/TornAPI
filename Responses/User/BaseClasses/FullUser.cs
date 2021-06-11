@@ -109,5 +109,7 @@ namespace TornAPI.Responses.User.BaseClasses
         [JsonProperty(PropertyName = "education_completed")]
         public List<int> CompletedEducations { get; set; }
 
+        [JsonProperty(PropertyName = "events")]
+        public Dictionary<long, Event> Events { get; set; }
     }
 }
