@@ -8,4 +8,12 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Responses\Faction\" />
+    <Folder Include="Responses\Company\" />
+    <Folder Include="Responses\ItemMarket\" />
+    <Folder Include="Responses\Torn\" />
+    <Folder Include="Responses\Properties\" />
+  </ItemGroup>
+
 </Project>

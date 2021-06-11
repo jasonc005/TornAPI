@@ -1,11 +1,11 @@
 ﻿using Newtonsoft.Json;
 
-namespace TornAPI.Responses
+namespace TornAPI.Responses.User.BaseClasses
 {
     public class BazaarItem
     {
         [JsonProperty(PropertyName = "ID")]
-        public int ID { get; set; }
+        public int ItemID { get; set; }
 
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }

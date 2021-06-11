@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace TornAPI.Responses
+namespace TornAPI.Responses.User.BaseClasses
 {
     public class Status
     {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace TornAPI.Responses
+namespace TornAPI.Responses.User.BaseClasses
 {
-    public class User
+    public class FullUser
     {
         [JsonProperty(PropertyName = "server_time")]
         public long? ServerTime { get; set; }

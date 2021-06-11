@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using TornAPI.Selections;
+using TornAPI.SelectionEnums;
 
 
 namespace TornAPI
