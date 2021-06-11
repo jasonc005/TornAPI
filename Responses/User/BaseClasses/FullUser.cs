@@ -100,5 +100,14 @@ namespace TornAPI.Responses.User.BaseClasses
         [JsonProperty(PropertyName = "display")]
         public List<DisplayCaseItem> DisplayCase { get; set; }
 
+        [JsonProperty(PropertyName = "education_current")]
+        public int CurrentEducationID { get; set; }
+
+        [JsonProperty(PropertyName = "education_timeleft")]
+        public int EducationTimeLeft { get; set; }
+
+        [JsonProperty(PropertyName = "education_completed")]
+        public List<int> CompletedEducations { get; set; }
+
     }
 }
