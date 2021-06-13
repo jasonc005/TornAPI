@@ -115,6 +115,7 @@ namespace TornAPI.Responses.User.BaseClasses
         [JsonProperty(PropertyName = "active_gym")]
         public int? ActiveGym { get; set; }
 
-
+        [JsonProperty(PropertyName = "halloffame")]
+        public Dictionary<string, HallOfFameStat> HallOfFame { get; set; }
     }
 }
