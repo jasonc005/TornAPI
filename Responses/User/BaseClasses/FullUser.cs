@@ -126,5 +126,8 @@ namespace TornAPI.Responses.User.BaseClasses
 
         [JsonProperty(PropertyName = "icons")]
         public Dictionary<string, string> Icons { get; set; }
+
+        [JsonProperty(PropertyName = "inventory")]
+        public List<InventoryItem> Inventory { get; set; }
     }
 }
