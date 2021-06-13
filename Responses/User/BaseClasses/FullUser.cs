@@ -101,15 +101,20 @@ namespace TornAPI.Responses.User.BaseClasses
         public List<DisplayCaseItem> DisplayCase { get; set; }
 
         [JsonProperty(PropertyName = "education_current")]
-        public int CurrentEducationID { get; set; }
+        public int? CurrentEducationID { get; set; }
 
         [JsonProperty(PropertyName = "education_timeleft")]
-        public int EducationTimeLeft { get; set; }
+        public int? EducationTimeLeft { get; set; }
 
         [JsonProperty(PropertyName = "education_completed")]
         public List<int> CompletedEducations { get; set; }
 
         [JsonProperty(PropertyName = "events")]
         public Dictionary<long, Event> Events { get; set; }
+
+        [JsonProperty(PropertyName = "active_gym")]
+        public int? ActiveGym { get; set; }
+
+
     }
 }
