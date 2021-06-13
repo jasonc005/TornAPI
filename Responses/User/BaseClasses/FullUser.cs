@@ -123,5 +123,8 @@ namespace TornAPI.Responses.User.BaseClasses
 
         [JsonProperty(PropertyName = "honors_time")]
         public List<long> HonorsTime { get; set; }
+
+        [JsonProperty(PropertyName = "icons")]
+        public Dictionary<string, string> Icons { get; set; }
     }
 }
