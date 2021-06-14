@@ -165,5 +165,8 @@ namespace TornAPI.Responses.User.BaseClasses
 
         [JsonProperty(PropertyName = "city_bank")]
         public CityBank CityBank { get; set; }
+
+        [JsonProperty(PropertyName = "networth")]
+        public NetWorth NetWorth { get; set; }
     }
 }
