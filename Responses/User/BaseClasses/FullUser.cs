@@ -288,9 +288,12 @@ namespace TornAPI.Responses.User.BaseClasses
         public Dictionary<int, Stock> Stocks { get; set; }
 
         [JsonProperty(PropertyName = "timestamp")]
-        public long Timestamp { get; set; }
+        public long? Timestamp { get; set; }
 
         [JsonProperty(PropertyName = "travel")]
         public Travel Travel { get; set; }
+
+        [JsonProperty(PropertyName = "weaponexp")]
+        public List<WeaponExperience> WeaponExperiences { get; set; }
     }
 }
