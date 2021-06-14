@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
 
 namespace TornAPI.Responses.User.BaseClasses
 {
@@ -295,5 +293,14 @@ namespace TornAPI.Responses.User.BaseClasses
 
         [JsonProperty(PropertyName = "weaponexp")]
         public List<WeaponExperience> WeaponExperiences { get; set; }
+
+        [JsonProperty(PropertyName = "manual_labor")]
+        public int? ManualLabor { get; set; }
+
+        [JsonProperty(PropertyName = "intelligence")]
+        public int? Intelligence { get; set; }
+
+        [JsonProperty(PropertyName = "endurance")]
+        public int? Endurance { get; set; }
     }
 }
