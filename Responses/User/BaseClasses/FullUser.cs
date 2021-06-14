@@ -147,5 +147,23 @@ namespace TornAPI.Responses.User.BaseClasses
 
         [JsonProperty(PropertyName = "messages")]
         public Dictionary<long, Message> Messages { get; set; }
+
+        [JsonProperty(PropertyName = "points")]
+        public int? Points { get; set; }
+
+        [JsonProperty(PropertyName = "cayman_bank")]
+        public long? CaymanBank { get; set; }
+
+        [JsonProperty(PropertyName = "vault_amount")]
+        public long? VaultAmount { get; set; }
+
+        [JsonProperty(PropertyName = "daily_networth")]
+        public long? DailyNetWorth { get; set; }
+
+        [JsonProperty(PropertyName = "money_onhand")]
+        public long? MoneyOnHand { get; set; }
+
+        [JsonProperty(PropertyName = "city_bank")]
+        public CityBank CityBank { get; set; }
     }
 }
