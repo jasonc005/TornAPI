@@ -198,5 +198,8 @@ namespace TornAPI.Responses.User.BaseClasses
 
         [JsonProperty(PropertyName = "book_perks")]
         public List<string> BookPerks { get; set; }
+
+        [JsonProperty(PropertyName = "personalstats")]
+        public Dictionary<string, long> PersonalStats { get; set; }
     }
 }
