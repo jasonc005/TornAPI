@@ -283,5 +283,8 @@ namespace TornAPI.Responses.User.BaseClasses
 
         [JsonProperty(PropertyName = "reviving")]
         public string Reviving { get; set; }
+
+        [JsonProperty(PropertyName = "stocks")]
+        public Dictionary<int, Stock> Stocks { get; set; }
     }
 }
