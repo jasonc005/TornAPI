@@ -271,5 +271,8 @@ namespace TornAPI.Responses.User.BaseClasses
 
         [JsonProperty(PropertyName = "reports")]
         public JObject Reports { get; set; }
+
+        [JsonProperty(PropertyName = "revives")]
+        public Dictionary<long, Revive> Revives { get; set; }
     }
 }
