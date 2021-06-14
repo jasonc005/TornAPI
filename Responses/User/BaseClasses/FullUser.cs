@@ -129,5 +129,8 @@ namespace TornAPI.Responses.User.BaseClasses
 
         [JsonProperty(PropertyName = "inventory")]
         public List<InventoryItem> Inventory { get; set; }
+
+        [JsonProperty(PropertyName = "jobpoints")]
+        public JobPoints JobPoints { get; set; }
     }
 }
