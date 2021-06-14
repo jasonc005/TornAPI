@@ -289,5 +289,8 @@ namespace TornAPI.Responses.User.BaseClasses
 
         [JsonProperty(PropertyName = "timestamp")]
         public long Timestamp { get; set; }
+
+        [JsonProperty(PropertyName = "travel")]
+        public Travel Travel { get; set; }
     }
 }
