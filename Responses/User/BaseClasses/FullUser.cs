@@ -268,5 +268,8 @@ namespace TornAPI.Responses.User.BaseClasses
 
         [JsonProperty(PropertyName = "refills")]
         public Refills Refills { get; set; }
+
+        [JsonProperty(PropertyName = "reports")]
+        public JObject Reports { get; set; }
     }
 }
