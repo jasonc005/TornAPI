@@ -168,5 +168,8 @@ namespace TornAPI.Responses.User.BaseClasses
 
         [JsonProperty(PropertyName = "networth")]
         public NetWorth NetWorth { get; set; }
+
+        [JsonProperty(PropertyName = "notifications")]
+        public Notifications Notifications { get; set; }
     }
 }
