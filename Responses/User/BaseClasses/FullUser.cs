@@ -259,5 +259,8 @@ namespace TornAPI.Responses.User.BaseClasses
 
         [JsonProperty(PropertyName = "last_action")]
         public LastAction LastAction { get; set; }
+
+        [JsonProperty(PropertyName = "properties")]
+        public Dictionary<long, Property> Properties { get; set; }
     }
 }
