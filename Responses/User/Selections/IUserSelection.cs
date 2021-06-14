@@ -1,6 +1,4 @@
-﻿using TornAPI.SelectionEnums;
-
-namespace TornAPI.Responses.User
+﻿namespace TornAPI.Responses.User.Selections
 {
     public interface IUserSelection
     {
