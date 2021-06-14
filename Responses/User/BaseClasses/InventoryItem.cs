@@ -20,6 +20,6 @@ namespace TornAPI.Responses.User.BaseClasses
         public int Equipped { get; set; }
 
         [JsonProperty(PropertyName = "market_price")]
-        public int MarketPrice { get; set; }
+        public long MarketPrice { get; set; }
     }
 }
