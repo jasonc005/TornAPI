@@ -132,5 +132,8 @@ namespace TornAPI.Responses.User.BaseClasses
 
         [JsonProperty(PropertyName = "jobpoints")]
         public JobPoints JobPoints { get; set; }
+
+        [JsonProperty(PropertyName = "log")]
+        public Dictionary<string, LogEntry> Log { get; set; }
     }
 }
