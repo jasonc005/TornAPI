@@ -144,5 +144,8 @@ namespace TornAPI.Responses.User.BaseClasses
 
         [JsonProperty(PropertyName = "merits")]
         public Dictionary<string, int> Merits { get; set; }
+
+        [JsonProperty(PropertyName = "messages")]
+        public Dictionary<long, Message> Messages { get; set; }
     }
 }
