@@ -286,5 +286,8 @@ namespace TornAPI.Responses.User.BaseClasses
 
         [JsonProperty(PropertyName = "stocks")]
         public Dictionary<int, Stock> Stocks { get; set; }
+
+        [JsonProperty(PropertyName = "timestamp")]
+        public long Timestamp { get; set; }
     }
 }
