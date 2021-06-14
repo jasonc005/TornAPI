@@ -262,5 +262,8 @@ namespace TornAPI.Responses.User.BaseClasses
 
         [JsonProperty(PropertyName = "properties")]
         public Dictionary<long, Property> Properties { get; set; }
+
+        [JsonProperty(PropertyName = "refills")]
+        public Refills Refills { get; set; }
     }
 }
