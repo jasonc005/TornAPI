@@ -10,13 +10,9 @@
 
   <ItemGroup>
     <Folder Include="Responses\Company\BaseClasses\" />
-    <Folder Include="Responses\Company\Selections\" />
     <Folder Include="Responses\Faction\BaseClasses\" />
-    <Folder Include="Responses\Faction\Selections\" />
     <Folder Include="Responses\ItemMarket\BaseClasses\" />
-    <Folder Include="Responses\ItemMarket\Selections\" />
     <Folder Include="Responses\Torn\BaseClasses\" />
-    <Folder Include="Responses\Torn\Selections\" />
   </ItemGroup>
 
 </Project>
