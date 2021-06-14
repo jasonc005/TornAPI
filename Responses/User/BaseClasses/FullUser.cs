@@ -135,5 +135,11 @@ namespace TornAPI.Responses.User.BaseClasses
 
         [JsonProperty(PropertyName = "log")]
         public Dictionary<string, LogEntry> Log { get; set; }
+
+        [JsonProperty(PropertyName = "medals_awarded")]
+        public List<int> MedalsAwarded { get; set; }
+
+        [JsonProperty(PropertyName = "medals_time")]
+        public List<long> MedalsTime { get; set; }
     }
 }

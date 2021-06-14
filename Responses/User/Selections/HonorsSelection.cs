@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace TornAPI.Responses.User.Selections
 {
-    public class HonorsSelection :IUserSelection
+    public class HonorsSelection : IUserSelection
     {
         [JsonProperty(PropertyName = "honors_awarded")]
         public List<int> HonorsAwarded { get; set; }
