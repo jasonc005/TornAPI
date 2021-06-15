@@ -64,6 +64,9 @@ namespace TornAPI.Responses.Torn.BaseClasses
         [JsonProperty(PropertyName = "territory")]
         public Dictionary<string, Territory> Territories { get; set; }
 
+        [JsonProperty(PropertyName = "territorywars")]
+        public Dictionary<string, TerritoryWar> TerritoryWars { get; set; }
+
 
     }
 }
