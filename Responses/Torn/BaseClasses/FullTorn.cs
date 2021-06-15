@@ -1,7 +1,5 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace TornAPI.Responses.Torn.BaseClasses
 {
@@ -67,6 +65,7 @@ namespace TornAPI.Responses.Torn.BaseClasses
         [JsonProperty(PropertyName = "territorywars")]
         public Dictionary<string, TerritoryWar> TerritoryWars { get; set; }
 
-
+        [JsonProperty(PropertyName = "timestamp")]
+        public long? Timestamp { get; set; }
     }
 }
