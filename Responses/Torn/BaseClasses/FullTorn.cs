@@ -31,6 +31,12 @@ namespace TornAPI.Responses.Torn.BaseClasses
         [JsonProperty(PropertyName = "items")]
         public Dictionary<int, Item> Items { get; set; }
 
+        [JsonProperty(PropertyName = "logcategories")]
+        public Dictionary<int, string> LogCategories { get; set; }
+
+        [JsonProperty(PropertyName = "logtypes")]
+        public Dictionary<int, string> LogTypes { get; set; }
+
 
     }
 }
