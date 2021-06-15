@@ -10,6 +10,9 @@ namespace TornAPI.Responses.Torn.BaseClasses
         [JsonProperty(PropertyName = "bank")]
         public Bank Bank { get; set; }
 
+        [JsonProperty(PropertyName = "cards")]
+        public Dictionary<int, Card> Cards { get; set; }
+
 
     }
 }
