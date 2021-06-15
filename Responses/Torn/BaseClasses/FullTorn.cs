@@ -25,6 +25,9 @@ namespace TornAPI.Responses.Torn.BaseClasses
         [JsonProperty(PropertyName = "gyms")]
         public Dictionary<int, Gym> Gyms { get; set; }
 
+        [JsonProperty(PropertyName = "honors")]
+        public Dictionary<int, Honor> Honors { get; set; }
+
 
     }
 }
