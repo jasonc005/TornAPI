@@ -68,7 +68,7 @@ namespace TornAPI.Responses.User.Selections
         public Job Job { get; set; }
 
         [JsonProperty(PropertyName = "faction")]
-        public Faction Faction { get; set; }
+        public BaseClasses.Faction Faction { get; set; }
 
         [JsonProperty(PropertyName = "married")]
         public Married Married { get; set; }
