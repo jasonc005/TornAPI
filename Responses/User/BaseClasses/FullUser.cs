@@ -156,6 +156,9 @@ namespace TornAPI.Responses.User.BaseClasses
         [JsonProperty(PropertyName = "vault_amount")]
         public long? VaultAmount { get; set; }
 
+        [JsonProperty(PropertyName = "company_funds")]
+        public long? CompanyFunds { get; set; }
+
         [JsonProperty(PropertyName = "daily_networth")]
         public long? DailyNetWorth { get; set; }
 
