@@ -2,6 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using TornAPI.Responses;
 using TornAPI.Responses.Company.Selections;
 using TornAPI.Responses.Faction.Selections;
 using TornAPI.Responses.ItemMarket.Selections;
@@ -22,132 +23,53 @@ namespace TornAPI
             _client = new HttpClient();
         }
 
-        public async Task<T> GetUserAsync<T>(
-            string userId, 
-            string apiKey) 
+        public async Task<T> GetUserAsync<T>(string userId, string apiKey, long? from = null, long? to = null)
             where T : IUserSelection, new()
-        {
-            var response = new T();
+        => await GetGenericAsync<T>(userId, apiKey, from, to);
 
-            var apiEndpointUrl = $"{BASE_URL}/user/{userId}?selections={response.GetSelectionName()}&key={apiKey}";
-
-            try
-            {
-                response = await GetAsync<T>(apiEndpointUrl);
-
-                return response;
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-        }
-
-        public async Task<T> GetPropertyAsync<T>(
-            string propertyId, 
-            string apiKey) 
+        public async Task<T> GetPropertyAsync<T>(string propertyId, string apiKey, long? from = null, long? to = null) 
             where T : IPropertySelection, new()
-        {
-            var response = new T();
+        => await GetGenericAsync<T>(propertyId, apiKey, from, to);
 
-            var apiEndpointUrl = $"{BASE_URL}/property/{propertyId}?selections={response.GetSelectionName()}&key={apiKey}";
-
-            try
-            {
-                response = await GetAsync<T>(apiEndpointUrl);
-
-                return response;
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-        }
-
-        public async Task<T> GetFactionAsync<T>(
-            string factionId, 
-            string apiKey) 
+        public async Task<T> GetFactionAsync<T>(string factionId, string apiKey, long? from = null, long? to = null) 
             where T : IFactionSelection, new()
-        {
-            var response = new T();
+        => await GetGenericAsync<T>(factionId, apiKey, from, to);
 
-            var apiEndpointUrl = $"{BASE_URL}/faction/{factionId}?selections={response.GetSelectionName()}&key={apiKey}";
-
-            try
-            {
-                response = await GetAsync<T>(apiEndpointUrl);
-
-                return response;
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-        }
-
-        public async Task<T> GetCompanyAsync<T>(
-            string companyId, 
-            string apiKey) 
+        public async Task<T> GetCompanyAsync<T>(string companyId, string apiKey, long? from = null, long? to = null) 
             where T : ICompanySelection, new()
-        {
-            var response = new T();
+        => await GetGenericAsync<T>(companyId, apiKey, from, to);
 
-            var apiEndpointUrl = $"{BASE_URL}/company/{companyId}?selections={response.GetSelectionName()}&key={apiKey}";
-
-            try
-            {
-                response = await GetAsync<T>(apiEndpointUrl);
-
-                return response;
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-        }
-
-        public async Task<T> GetItemMarketAsync<T>(
-            string itemId, 
-            string apiKey) 
+        public async Task<T> GetItemMarketAsync<T>(string itemId, string apiKey, long? from = null, long? to = null) 
             where T : IItemMarketSelection, new()
-        {
-            var response = new T();
+        => await GetGenericAsync<T>(itemId, apiKey, from, to);
 
-            var apiEndpointUrl = $"{BASE_URL}/market/{itemId}?selections={response.GetSelectionName()}&key={apiKey}";
-
-            try
-            {
-                response = await GetAsync<T>(apiEndpointUrl);
-
-                return response;
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-        }
-
-        public async Task<T> GetTornAsync<T>(
-            string id, 
-            string apiKey) 
+        public async Task<T> GetTornAsync<T>(string id, string apiKey, long? from = null, long? to = null) 
             where T : ITornSelection, new()
+        => await GetGenericAsync<T>(id, apiKey, from, to);
+
+        private async Task<T> GetGenericAsync<T>(
+            string id,
+            string apiKey,
+            long? from,
+            long? to)
+            where T : ISelection, new()
         {
-            var response = new T();
+            string sectionName = null;
+            T responseObj = new T();
+            if (responseObj is IUserSelection) sectionName = "user";
+            else if (responseObj is IPropertySelection) sectionName = "property";
+            else if (responseObj is IFactionSelection) sectionName = "faction";
+            else if (responseObj is ICompanySelection) sectionName = "company";
+            else if (responseObj is IItemMarketSelection) sectionName = "market";
+            else if (responseObj is ITornSelection) sectionName = "torn";
 
-            var apiEndpointUrl = $"{BASE_URL}/torn/{id}?selections={response.GetSelectionName()}&key={apiKey}";
+            var endpointUrl = $"{BASE_URL}/{sectionName}/{id}?selections={responseObj.GetSelectionName()}&key={apiKey}";
+            if (from != null) endpointUrl += $"&from={from}";
+            if (to != null) endpointUrl += $"&to={to}";
 
-            try
-            {
-                response = await GetAsync<T>(apiEndpointUrl);
-
-                return response;
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
+            return await GetAsync<T>(endpointUrl);
         }
-        
+
         private async Task<T> GetAsync<T>(string url)
         {
             var response = await _client.GetAsync(url);

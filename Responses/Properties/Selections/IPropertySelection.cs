@@ -1,7 +1,6 @@
 ﻿namespace TornAPI.Responses.Properties.Selections
 {
-    public interface IPropertySelection
+    public interface IPropertySelection : ISelection
     {
-        string GetSelectionName();
     }
 }

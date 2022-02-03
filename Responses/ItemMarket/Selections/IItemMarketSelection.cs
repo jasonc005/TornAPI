@@ -1,7 +1,6 @@
 ﻿namespace TornAPI.Responses.ItemMarket.Selections
 {
-    public interface IItemMarketSelection
+    public interface IItemMarketSelection : ISelection
     {
-        string GetSelectionName();
     }
 }

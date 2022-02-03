@@ -1,7 +1,6 @@
 ﻿namespace TornAPI.Responses.Company.Selections
 {
-    public interface ICompanySelection
+    public interface ICompanySelection : ISelection
     {
-        string GetSelectionName();
     }
 }

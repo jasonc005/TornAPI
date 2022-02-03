@@ -1,7 +1,6 @@
 ﻿namespace TornAPI.Responses.Torn.Selections
 {
-    public interface ITornSelection
+    public interface ITornSelection : ISelection
     {
-        string GetSelectionName();
     }
 }
