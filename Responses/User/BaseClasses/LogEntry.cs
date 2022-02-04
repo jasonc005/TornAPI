@@ -14,7 +14,13 @@ namespace TornAPI.Responses.User.BaseClasses
         [JsonProperty(PropertyName = "timestamp")]
         public long Timestamp { get; set; }
 
+        [JsonProperty(PropertyName = "category")]
+        public string Category { get; set; }
+
         [JsonProperty(PropertyName = "data")]
         public JObject Data { get; set; }
+
+        [JsonProperty(PropertyName = "params")]
+        public JObject Params { get; set; }
     }
 }
